@@ -31,11 +31,17 @@
     },
     "stock": {
       "type": "integer",
-      "required": false
+      "required": true
     },
     "description": {
       "type": "text",
-      "required": true
+      "required": false
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category",
+      "mappedBy": "product"
     }
   }
 }
